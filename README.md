@@ -1,6 +1,6 @@
 # Static IR Drop Prediction with Attention U-Net and Saliency-Based Explainability
 
-This repository contains the implementation of the methodologies proposed in the paper "Static IR Drop Prediction with Attention U-Net and Saliency-Based Explainability" by Lizi Zhang and Azadeh Davoodi. The project focuses on improving static IR drop prediction in power delivery networks (PDNs) using a novel Attention U-Net model and enhancing the explainability of predictions through saliency maps.
+This repository contains the implementation of the methodologies proposed in the paper "Static IR Drop Prediction with Attention U-Net and Saliency-Based Explainability" by Lizi Zhang and Azadeh Davoodi (https://www.arxiv.org/abs/2408.03292). The project focuses on improving static IR drop prediction in power delivery networks (PDNs) using a novel Attention U-Net model and enhancing the explainability of predictions through saliency maps.
 
 ## Introduction
 
@@ -16,10 +16,35 @@ Static IR drop analysis is a critical task in integrated circuit design, as it h
 ## Installation
 To install the required dependencies, clone this repository and install the necessary Python packages:
 
-\```bash
+```bash
 git clone https://github.com/lzzh97/Static-IR-Drop-Prediction.git
 cd Static-IR-Drop-Prediction
 pip install -r requirements.txt
-\```
+```
 
 Ensure you have Python 3.8 or later installed.
+
+## Usage
+
+### Training and Evaluation
+
+1. Run the pretraining phase using the artificially generated dataset.
+```
+python train_attunet.py --phase pretrain
+```
+
+2. Fine-tune the model using a smaller, real dataset.
+```
+python train_attunet.py --phase finetune --pre <path to pretrained model>
+```
+
+3. Evaluate the model on the test dataset.
+```
+python evaluate.py --model <path to model>
+```
+
+4. Generate saliency maps to explain and diagnose high IR drop predictions.
+```
+python generate_saliency_maps.py --model <path to model>
+```
+
