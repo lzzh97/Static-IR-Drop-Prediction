@@ -16,9 +16,10 @@ Static IR drop analysis is a critical task in integrated circuit design, as it h
 ## Installation
 To install the required dependencies, clone this repository and install the necessary Python packages:
 
-```bash
+\```bash
 git clone https://github.com/lzzh97/Static-IR-Drop-Prediction.git
 cd Static-IR-Drop-Prediction
 pip install -r requirements.txt
+\```
 
 Ensure you have Python 3.8 or later installed.
