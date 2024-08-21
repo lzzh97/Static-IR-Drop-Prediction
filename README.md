@@ -24,27 +24,34 @@ pip install -r requirements.txt
 
 Ensure you have Python 3.8 or later installed.
 
+## Data Preperation
+The dataset required for this project is included in the repository. This data was originally provided by the ICCAD 2023 contest (https://github.com/ASU-VDA-Lab/ML-for-IR-drop) and is used for training and evaluating the models in this repository.
+
 ## Usage
 
 ### Training and Evaluation
 
 1. Run the pretraining phase using the artificially generated dataset.
 ```
-python train_attunet.py --phase pretrain
+python ./AttUNet/train_attunet.py --phase pretrain
 ```
 
 2. Fine-tune the model using a smaller, real dataset.
 ```
-python train_attunet.py --phase finetune --pre <path to pretrained model>
+python ./AttUNet/train_attunet.py --phase finetune --pre <path to pretrained model>
 ```
 
 3. Evaluate the model on the test dataset.
 ```
-python evaluate.py --model <path to model>
+python ./AttUNet/evaluate.py --model <path to model>
 ```
 
 4. Generate saliency maps to explain and diagnose high IR drop predictions.
 ```
-python generate_saliency_maps.py --model <path to model>
+python ./AttUNet/generate_saliency_maps.py --model <path to model>
 ```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
