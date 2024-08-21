@@ -51,7 +51,4 @@ python ./AttUNet/evaluate.py --model <path to model>
 python ./AttUNet/generate_saliency_maps.py --model <path to model>
 ```
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
