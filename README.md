@@ -1,6 +1,6 @@
 # Saliency-Based Explainability for Static IR Drop Prediction 
 
-Supported by _NSF award 2322713_
+_Supported by NSF award 2322713_
 
 This repository contains the implementation of the methodologies proposed in the paper "[Static IR Drop Prediction with Attention U-Net and Saliency-Based Explainability](https://www.arxiv.org/abs/2408.03292)" by Lizi Zhang and Azadeh Davoodi. The project focuses on improving static IR drop prediction in power delivery networks (PDNs) using a novel Attention U-Net model and providing explainability of predictions through saliency maps.
 
